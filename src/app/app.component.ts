@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MyImage } from './model';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'day31';
+  image = "/assets/cat2.avif"
+  imageWidth = 20;
+
+  images = [
+    "/assets/cat.jpeg",
+    "/assets/cat2.avif",
+  ]
+
+  imageClicked(data: MyImage) {
+    console.info(`image clicked: `, data)
+  }
+
+
 }
